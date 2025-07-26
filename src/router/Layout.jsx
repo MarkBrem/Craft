@@ -20,7 +20,7 @@ const [userName, setUserName] = useState('');
       ) : (<>
       <Header name= {userName}/>
       <main>
-        <Container> <Outlet /></Container>
+          <Outlet />
       </main>
       <Footer/>
       </>

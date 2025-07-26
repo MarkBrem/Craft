@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-export const FooterSection = styled.footer`\
+export const FooterSection = styled.footer`
 display: flex;
 text-align: center;
 background-color: #2e282a;
+padding: 40px 0;
 `
 
 export const FooterLogo = styled.img`
@@ -28,15 +29,17 @@ color: #fff;
 `
 
 export const LogoItem = styled.div`
-margin-right: auto;
-margin-left: 20px;
 `
 
 export const WishList = styled.div`
-margin-left: auto;
-margin-right: 60px;
-display: flex;
-justify-content: center;
-flex-direction: column;
-gap: 10px;
+text-align: right;
 `
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  flex-direction: row;
+  width: 100%; 
+  gap: 20px; 
+`;

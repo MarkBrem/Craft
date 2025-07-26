@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HowItWorksTitle = styled.h2`
-
-    font-size: 30px;
-    text-align: center;
-`
+  font-family: "Manrope";
+  font-size: 30px;
+  text-align: center;
+`;
 
 export const HowItWorksList = styled.ul`
   display: flex;
@@ -32,11 +32,18 @@ export const HowItWorksListItem = styled.li`
 `;
 
 export const CardTitle = styled.h3`
-    font-size: 20px;
-`
+  font-family: "Manrope";
+  font-size: 19px;
+  margin-top: 10px;
+`;
 
 export const HowItWorksText = styled.p`
-    font-family: 'Manrope';
-    font-weight: 400;
-    font-size: 18px;
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 15px;
+`;
+
+export const SectionHowItWorks = styled.div`
+    padding: 150px 0;
 `

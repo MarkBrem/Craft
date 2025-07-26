@@ -12,6 +12,6 @@ export const HeroTextStyled = styled.p`
 
 export const BackgroundHero = styled.div`
   background:linear-gradient(163deg, rgba(119, 176, 65, 0.7) 0%, rgba(119, 176, 65, 0.7) 35%, rgba(255, 200, 20, 0.7) 100%);
-  padding: 130px 0;
+  padding: 160px 0;
   text-align: center;
 `

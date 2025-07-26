@@ -45,3 +45,10 @@ export const Logo = styled.img`
 width: 95px;
 height: auto;
 `
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;

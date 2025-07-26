@@ -1,5 +1,5 @@
 import { Container } from "../container/Container"
-import { HowItWorksList,HowItWorksListItem, HowItWorksTitle, HowItWorksText, CardTitle } from "./HowWorksStyled"
+import { HowItWorksList,HowItWorksListItem, HowItWorksTitle, HowItWorksText, CardTitle, SectionHowItWorks } from "./HowWorksStyled"
 import { LuLayoutDashboard } from "react-icons/lu";
 import { TbArmchair2 } from "react-icons/tb";
 import { MdOutlineSaveAlt } from "react-icons/md";
@@ -7,24 +7,26 @@ import { MdOutlineSaveAlt } from "react-icons/md";
 export const HowItWorks = () =>{
     return <>
     <Container>
+     <SectionHowItWorks>   
     <HowItWorksTitle>Як це працює?</HowItWorksTitle>
     <HowItWorksList>
         <HowItWorksListItem>
-            <LuLayoutDashboard size={50}/>
+            <LuLayoutDashboard size={45}/>
             <CardTitle>Обери кімнату</CardTitle>
             <HowItWorksText>Вибери розмір кімнати або створюй свою сітку</HowItWorksText>
         </HowItWorksListItem>
         <HowItWorksListItem>
-            <TbArmchair2 size={50}/>
+            <TbArmchair2 size={45}/>
             <CardTitle>Перетягуй меблі</CardTitle>
             <HowItWorksText>Обирай предмети з каталогу та перетягуй у свою кімнату</HowItWorksText>
         </HowItWorksListItem>
         <HowItWorksListItem>
-            <MdOutlineSaveAlt size={50}/>
+            <MdOutlineSaveAlt size={45}/>
             <CardTitle>Збережи та поділись</CardTitle>
             <HowItWorksText>Збережи свій дизайн як картинку або поділись із друзями</HowItWorksText>
         </HowItWorksListItem>
     </HowItWorksList>
+    </SectionHowItWorks>
     </Container>
     </>
 }

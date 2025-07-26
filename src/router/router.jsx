@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Hero } from "../hero/Hero";
 import { Layout } from "./Layout";
-import { HowItWorks } from "../howItWorks/HowWork";;
+import { HomePage } from "../components/HomePage/homePage";
 
 export const routing = createBrowserRouter([
   {
@@ -9,11 +8,7 @@ export const routing = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true,
-        element: <Hero/>,
-      },
-      {
-        path: "/HowItWorks",
-        element: <HowItWorks/>,
+        element: <HomePage/>,
       },
     ],
   },
