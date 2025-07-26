@@ -13,5 +13,5 @@ export const ContainerStyled = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  padding: 0px 15px 80px 15px;
+  padding: 10px 15px 10px 15px;
 `;

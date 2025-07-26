@@ -25,6 +25,8 @@ align-items: center;
 `
 
 export const UserList = styled.ul`
+display: flex;
+align-items: center;
 margin-left: auto;
 margin-right: 60px;
 `

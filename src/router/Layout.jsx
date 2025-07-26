@@ -22,7 +22,7 @@ const [userName, setUserName] = useState('');
       <main>
         <Container> <Outlet /></Container>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
       </>
       )}
     </div>

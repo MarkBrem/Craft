@@ -6,8 +6,7 @@ import { Footer } from "./footer/Footer";
 
 export const App = () => {
   return <>
-  {/* <RouterProvider router={routing} />;
-  <GlobalStyle/> */}
-  <Footer/>
+  <RouterProvider router={routing} />;
+  <GlobalStyle/>
   </>
 };
