@@ -1,12 +1,12 @@
-import { Header } from "./header/Header";
 import { GlobalStyle } from "./GlobalStyle";
+import { routing } from "./router/router";
+import { RouterProvider } from "react-router-dom";
 import "./index.css";
-import { Container } from "./container/Container";
- 
 
 export const App = () => {
   return <>
-  <Container children={<Header/>}/>
+  <RouterProvider router={routing} />;
   <GlobalStyle/>
+
   </>
 };
