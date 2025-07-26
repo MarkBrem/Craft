@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Hero } from "../hero/Hero";
 import { Layout } from "./Layout";
-import { HowItWorks } from "../howItWorks/HowWork";
-import { RegistrationForm } from "../components/Form";
+import { HowItWorks } from "../howItWorks/HowWork";;
 
 export const routing = createBrowserRouter([
   {
@@ -10,8 +9,7 @@ export const routing = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true,
-        element: <Hero/>, 
-        loader: <RegistrationForm/>,
+        element: <Hero/>,
       },
       {
         path: "/HowItWorks",
