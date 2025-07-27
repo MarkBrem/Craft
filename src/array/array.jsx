@@ -1,45 +1,55 @@
+import f1 from '../array-foto/2d-1.jpeg';
+import f2 from '../array-foto/2d-2.jpeg';
+import f3 from '../array-foto/2d-3.jpeg';
+import f4 from '../array-foto/2d-4.jpeg';
+import f5 from '../array-foto/2d-5.jpeg';
+import f6 from '../array-foto/2d-6.jpeg';
+import f7 from '../array-foto/2d-7.jpeg';
+import f8 from '../array-foto/2d-8.jpeg';
+import f9 from '../array-foto/2d-9.jpeg';
+import f10 from '../array-foto/2d-10.jpeg';
+import f11 from '../array-foto/2d-11.jpeg';
+import f12 from '../array-foto/2d-12.jpeg';
+import f13 from '../array-foto/2d-13.jpeg';
+import f14 from '../array-foto/2d-14.jpeg';
+import f15 from '../array-foto/2d-15.jpeg';
+import f16 from '../array-foto/2d-16.jpeg';
+import f17 from '../array-foto/2d-17.jpeg';
+import f18 from '../array-foto/2d-18.jpeg';
+import f19 from '../array-foto/2d-19.jpeg';
+import f20 from '../array-foto/2d-20.jpeg';
+import f21 from '../array-foto/2d-21.jpeg';
+import f22 from '../array-foto/2d-22.jpeg';
+import f23 from '../array-foto/2d-23.jpeg';
+import f24 from '../array-foto/2d-24.jpeg';
+import f25 from '../array-foto/2d-25.jpeg';
+
 export const furniture = [
-  { id: 1, name: "Письмовий стіл", category: "Столи" },
-  { id: 2, name: "Обідній стіл", category: "Столи" },
-  { id: 3, name: "Журнальний стіл", category: "Столи" },
-  { id: 4, name: "Кухонний стіл", category: "Столи" },
-  { id: 5, name: "Стіл-трансформер", category: "Столи" },
-  { id: 6, name: "Скляний стіл", category: "Столи" },
-  { id: 7, name: "Стіл для ноутбука", category: "Столи" },
-  { id: 8, name: "Стіл з висувними ящиками", category: "Столи" },
-  { id: 9, name: "Стіл-консоль", category: "Столи" },
-  { id: 10, name: "Комп'ютерний стіл", category: "Столи" },
+  { id: 1, name: "Письмовий стіл", category: "Столи", foto2d: f1 },
+  { id: 2, name: "Обідній стіл", category: "Столи", foto2d: f2 },
+  { id: 3, name: "Журнальний стіл", category: "Столи", foto2d: f3 },
+  { id: 4, name: "Кухонний стіл", category: "Столи", foto2d: f4 },
+  { id: 5, name: "Кутовий стіл", category: "Столи", foto2d: f5 },
+  { id: 6, name: "Скляний стіл", category: "Столи", foto2d: f6 },
+  { id: 7, name: "Стіл для ноутбука", category: "Столи", foto2d: f7 },
+  { id: 8, name: "Стіл з висувними ящиками", category: "Столи", foto2d: f8 },
+  { id: 9, name: "Стіл-консоль", category: "Столи", foto2d: f9 },
+  { id: 10, name: "Комп'ютерний стіл", category: "Столи", foto2d: f10 },
 
-  { id: 11, name: "Офісний стілець", category: "Стільці" },
-  { id: 12, name: "Дерев'яний стілець", category: "Стільці" },
-  { id: 13, name: "Барний стілець", category: "Стільці" },
-  { id: 14, name: "Крісло-стілець", category: "Стільці" },
-  { id: 15, name: "Стілець для ванної", category: "Стільці" },
-  { id: 16, name: "Стілець з м’яким сидінням", category: "Стільці" },
-  { id: 17, name: "Складний стілець", category: "Стільці" },
-  { id: 18, name: "Стілець-гойдалка", category: "Стільці" },
-  { id: 19, name: "Дитячий стілець", category: "Стільці" },
-  { id: 20, name: "Стілець без спинки", category: "Стільці" },
+  { id: 11, name: "Офісний стілець", category: "Стільці", foto2d: f11 },
+  { id: 12, name: "Дерев'яний стілець", category: "Стільці", foto2d: f12 },
+  { id: 13, name: "ігрове крісло", category: "Стільці", foto2d: f13 },
+  { id: 14, name: "Крісло-стілець", category: "Стільці", foto2d: f14 },
+  { id: 15, name: "Крісло-мішок", category: "Стільці", foto2d: f15 },
+  { id: 16, name: "Стілець з м’яким сидінням", category: "Стільці", foto2d: f16 },
+  { id: 17, name: "Крісло для відпочинку", category: "Стільці", foto2d: f17 },
 
-  { id: 21, name: "Шафа-купе", category: "Шафи" },
-  { id: 22, name: "Книжкова шафа", category: "Шафи" },
-  { id: 23, name: "Кухонна шафа", category: "Шафи" },
-  { id: 24, name: "Шафа для одягу", category: "Шафи" },
-  { id: 25, name: "Настінна шафа", category: "Шафи" },
-  { id: 26, name: "Шафа з дзеркалом", category: "Шафи" },
-  { id: 27, name: "Кутова шафа", category: "Шафи" },
-  { id: 28, name: "Шафа для взуття", category: "Шафи" },
-  { id: 29, name: "Комбінована шафа", category: "Шафи" },
-  { id: 30, name: "Шафа з полицями", category: "Шафи" },
-
-  { id: 31, name: "Прямий диван", category: "Дивани" },
-  { id: 32, name: "Кутовий диван", category: "Дивани" },
-  { id: 33, name: "Розкладний диван", category: "Дивани" },
-  { id: 34, name: "Диван-ліжко", category: "Дивани" },
-  { id: 35, name: "Диван з отоманкою", category: "Дивани" },
-  { id: 36, name: "Модульний диван", category: "Дивани" },
-  { id: 37, name: "Компактний диван", category: "Дивани" },
-  { id: 38, name: "Диван для вітальні", category: "Дивани" },
-  { id: 39, name: "Дизайнерський диван", category: "Дивани" },
-  { id: 40, name: "Ретро диван", category: "Дивани" },
+  { id: 18, name: "Прямий диван", category: "Дивани", foto2d: f18 },
+  { id: 19, name: "Кутовий диван", category: "Дивани", foto2d: f19 },
+  { id: 20, name: "Розкладний диван", category: "Дивани", foto2d: f20 },
+  { id: 21, name: "Диван з отоманкою", category: "Дивани", foto2d: f21 },
+  { id: 22, name: "Модульний диван", category: "Дивани", foto2d: f22 },
+  { id: 23, name: "Диван для вітальні", category: "Дивани", foto2d: f23 },
+  { id: 24, name: "Дизайнерський диван", category: "Дивани", foto2d: f24 },
+  { id: 25, name: "Крісло-диван", category: "Дивани", foto2d: f25 }
 ];

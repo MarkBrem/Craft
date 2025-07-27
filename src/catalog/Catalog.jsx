@@ -3,7 +3,7 @@ import { furniture } from "../array/array";
 import { CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
 import { Container } from "../container/Container";
 
-const allCategories = ["Столи", "Стільці", "Шафи", "Дивани"];
+const allCategories = ["Столи", "Стільці", "Дивани"];
 
 
 
@@ -43,7 +43,7 @@ export const Catalog = () => {
       <CatalogList>
         {filteredFurniture.map((item) => (
           <CatalogItem key={item.id}>
-            {item.name}
+            <p>{item.name}</p>
           </CatalogItem>
         ))}
       </CatalogList>
