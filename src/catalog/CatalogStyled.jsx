@@ -1,0 +1,39 @@
+import styled from "styled-components";
+
+export const CatalogList= styled.ul`
+margin-top: 10px;
+margin-bottom: 10px;
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 60px;
+`
+
+export const CatalogItem = styled.li`
+display: flex;
+justify-content: center;
+width: 150px;
+height: 150px;
+border-radius: 8px;
+background-color: #76b041;
+`
+
+export const CategoryList = styled.ul`
+display: flex;  
+justify-content: center;
+gap: 10px;
+`
+    
+
+export const CategoryButton = styled.button`
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: ${(props) => (props.$active ? "#76b041" : "#ccc")};
+  color: #000;
+  font-weight: ${(props) => (props.$active ? "bold" : "normal")};
+  transition: background-color 0.3s ease;
+`;

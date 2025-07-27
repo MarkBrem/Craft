@@ -14,20 +14,20 @@ const [userName, setUserName] = useState('');
     setIsSubmitted(true);
   };
   return (<>
-  <div style={{ height: '100vh', width: '100vw', margin: 0 }}>
+  {/* <div style={{ height: '100vh', width: '100vw', margin: 0 }}>
       {!isSubmitted ? (
         <RegistrationForm onNameSubmit={handleNameSubmit} />
-      ) : (<>
-      <Header name= {userName}/>
+      ) : (<> */}
+      
+      {/* </>
+      )}
+    </div> */}
+      
+     <Header name= {userName}/>
       <main>
           <Outlet />
       </main>
       <Footer/>
-      </>
-      )}
-    </div>
-      
-     
   </>
     
   );

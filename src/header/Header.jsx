@@ -17,7 +17,7 @@ export const Header = ({ name }) => {
 
           <NavList>
             <NavItem>
-              <NavLink to={''}>Каталог</NavLink>
+              <NavLink to={'/catalog'}>Каталог</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to={''}>Створити кімнату</NavLink>
