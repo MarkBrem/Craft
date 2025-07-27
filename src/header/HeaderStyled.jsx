@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
 export const HeadrerSection = styled.header`
 display: flex;
 flex-direction: row;
@@ -52,3 +54,31 @@ export const FlexWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
 `;
+
+export const StyledNavLink = styled(NavLink)`
+  position: relative;
+  padding-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+    background-color: #76b041;
+    border-radius: 2px;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }`;

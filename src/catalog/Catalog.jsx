@@ -28,7 +28,7 @@ export const Catalog = () => {
       <CategoryList>
         {allCategories.map((category) => (
             <li>
-                <CategoryButton
+              <CategoryButton
             key={category}
             $active={selectedCategories.includes(category)}
             onClick={() => toggleCategory(category)}

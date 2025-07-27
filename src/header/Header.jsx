@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { HeadrerSection, NavList, UserItem, NavItem, Hello, Logo, LogoContainer, UserList, FlexWrapper} from "./HeaderStyled";
+import { HeadrerSection, NavList, UserItem, NavItem, Hello, Logo, LogoContainer, UserList, FlexWrapper, StyledNavLink} from "./HeaderStyled";
 import { FaRegUserCircle } from "react-icons/fa";
 import { Container } from "../container/Container";
 import logo from '../foto/logo.png';
@@ -17,10 +17,10 @@ export const Header = ({ name }) => {
 
           <NavList>
             <NavItem>
-              <NavLink to={'/catalog'}>Каталог</NavLink>
+              <StyledNavLink to={'/catalog'}>Каталог</StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to={'createRoom'}>Створити кімнату</NavLink>
+              <StyledNavLink to={'createRoom'}>Створити кімнату</StyledNavLink>
             </NavItem>
           </NavList>
 

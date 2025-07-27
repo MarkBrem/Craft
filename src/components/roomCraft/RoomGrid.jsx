@@ -1,7 +1,7 @@
 import { Container } from "../../container/Container"
 import { RoomGridStl, GridCell, RoomBackground } from "./RoomGrid.styled"
 import floorTexture from '../../foto/c6a47533567533d7eb19209983b773e8.jpg'
-import bgImage from "../../foto/bgimage2.jpg"
+import bgImage from "../../foto/bgimage.jpg"
 
 export const RoomGrid = () =>{
     return <>

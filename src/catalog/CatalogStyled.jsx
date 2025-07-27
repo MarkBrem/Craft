@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const CatalogList= styled.ul`
-margin-top: 10px;
-margin-bottom: 10px;
+margin-top: 30px;
+margin-bottom: 30px;
 display: flex;
 justify-content: center;
 flex-direction: row;
 flex-wrap: wrap;
-gap: 60px;
+gap: 45px;
 `
 
 export const CatalogItem = styled.li`
 display: flex;
 justify-content: center;
-width: 150px;
-height: 150px;
+width: 230px;
+height: 280px;
 border-radius: 8px;
 background-color: #76b041;
 `
@@ -36,4 +36,5 @@ export const CategoryButton = styled.button`
   color: #000;
   font-weight: ${(props) => (props.$active ? "bold" : "normal")};
   transition: background-color 0.3s ease;
+  
 `;
