@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
 import { HomePage } from "../components/HomePage/homePage";
 import { Catalog } from "../catalog/Catalog";
+import { RoomGrid } from "../components/roomCraft/RoomGrid";
 
 export const routing = createBrowserRouter([
   {
@@ -12,8 +13,12 @@ export const routing = createBrowserRouter([
         element: <HomePage/>,
       },
       {
-        path: "catalog",
+        path: "/catalog",
         element: <Catalog />,
+      },
+      {
+        path:"/createRoom",
+        element: <RoomGrid/>
       }
     ],
   },

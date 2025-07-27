@@ -20,7 +20,7 @@ export const Header = ({ name }) => {
               <NavLink to={'/catalog'}>Каталог</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to={''}>Створити кімнату</NavLink>
+              <NavLink to={'createRoom'}>Створити кімнату</NavLink>
             </NavItem>
           </NavList>
 
