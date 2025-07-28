@@ -23,6 +23,11 @@ import f22 from '../array-foto/2d-22.jpeg';
 import f23 from '../array-foto/2d-23.jpeg';
 import f24 from '../array-foto/2d-24.jpeg';
 import f25 from '../array-foto/2d-25.jpeg';
+import f26 from '../array-foto/2d-26.jpeg';
+import f27 from '../array-foto/2d-27.jpeg';
+import f28 from '../array-foto/2d-28.jpeg';
+import f29 from '../array-foto/2d-29.jpeg'; 
+import f30 from '../array-foto/2d-30.jpeg';
 
 export const furniture = [
   { id: 1, name: "Письмовий стіл", category: "Столи", foto2d: f1 },
@@ -51,5 +56,11 @@ export const furniture = [
   { id: 22, name: "Модульний диван", category: "Дивани", foto2d: f22 },
   { id: 23, name: "Диван для вітальні", category: "Дивани", foto2d: f23 },
   { id: 24, name: "Дизайнерський диван", category: "Дивани", foto2d: f24 },
-  { id: 25, name: "Крісло-диван", category: "Дивани", foto2d: f25 }
+  { id: 25, name: "Крісло-диван", category: "Дивани", foto2d: f25 },
+
+  {id: 26, name: "Біле двоспальне ліжко", category: "Ліжка", foto2d: f26 },
+  {id: 27, name: "Сіре двоспальне ліжко", category: "Ліжка", foto2d: f27 },
+  {id: 28, name: "Темне двоспальне ліжко", category: "Ліжка", foto2d: f28 },
+  {id: 29, name: "Біле односпальне ліжко", category: "Ліжка", foto2d: f29 },
+  {id: 30, name: "Сіре односпальне ліжко", category: "Ліжка", foto2d: f30 },
 ];
