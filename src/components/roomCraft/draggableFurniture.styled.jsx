@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const DraggableItem = styled.div`
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
