@@ -6,7 +6,7 @@ import {
   Contacts,
   LogoItem,
   WishList,
-  FlexWrapper
+  FlexWrapper,
 } from "./FoterStyled";
 import { Container } from "../container/Container";
 

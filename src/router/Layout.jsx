@@ -17,17 +17,23 @@ const [userName, setUserName] = useState('');
   {/* <div style={{ height: '100vh', width: '100vw', margin: 0 }}>
       {!isSubmitted ? (
         <RegistrationForm onNameSubmit={handleNameSubmit} />
-      ) : (<> */}
-      
-      {/* </>
-      )}
-    </div> */}
-      
-     <Header name= {userName}/>
+      ) : (<>
+      <Header name= {userName}/>
       <main>
           <Outlet />
       </main>
       <Footer/>
+      </>
+      )}
+    </div> */}
+      <>
+      <Header name= {userName}/>
+      <main>
+          <Outlet />
+      </main>
+      <Footer/>
+      </>
+     
   </>
     
   );

@@ -5,6 +5,12 @@ color : #fff;
 margin-bottom: 20px;
 margin-left:auto;
 margin-right: auto;
+font-size: 30px;
+
+@media screen and (max-width: 767px){
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
 `
 
 export const Form = styled.form`
@@ -18,6 +24,12 @@ border: 2px solid #76b041;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media screen and (max-width: 767px){
+    width: 200px;
+    padding: 15px;
+    gap: 15px;
+  }
 `
 
 export const Wraper = styled.div`
@@ -33,6 +45,11 @@ padding: 10px;
   background-color: #fff;
   border-radius: 6px;
   font-size: 16px;
+
+  @media screen and (max-width: 767px){
+    font-size: 12px;
+    padding: 5px;
+  }
 `
 
 export const FormButton = styled.button`
@@ -42,4 +59,9 @@ padding: 10px;
   border: none;
   border-radius: 6px;
   font-size: 16px;
+
+  @media screen and (max-width: 767px){
+    font-size: 14px;
+    padding: 5px;
+  }
 `

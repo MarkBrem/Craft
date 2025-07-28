@@ -18,6 +18,11 @@ export const NavList = styled.ul`
 display: flex;
 flex-direction: row;
 gap: 60px;
+@media screen and (max-width: 767px){
+  margin-left: 25px;
+  margin-right: 25px;
+    gap: 20px;
+  }
 `
 
 export const NavItem = styled.li`
@@ -41,11 +46,17 @@ gap: 5px;
 
 export const Hello = styled.p`
 color: #fff;
+@media screen and (max-width: 767px){
+    display: none;
+  }
 ` 
 
 export const Logo = styled.img`
 width: 95px;
 height: auto;
+@media screen and (max-width: 767px){
+    width: 70px;
+  }
 `
 
 export const FlexWrapper = styled.div`
@@ -61,6 +72,10 @@ export const StyledNavLink = styled(NavLink)`
   color: white;
   text-decoration: none;
   font-size: 18px;
+
+  @media screen and (max-width: 767px){
+    font-size: 12px;
+  }
 
   &::after {
     content: '';
