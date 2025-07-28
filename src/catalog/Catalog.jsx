@@ -3,7 +3,7 @@ import { furniture } from "../array/array";
 import { CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
 import { Container } from "../container/Container";
 
-const allCategories = ["Столи", "Стільці", "Дивани"];
+const allCategories = ["Столи", "Стільці", "Дивани", "Ліжка"];
 
 export const Catalog = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
