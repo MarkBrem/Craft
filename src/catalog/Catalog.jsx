@@ -1,7 +1,10 @@
 import { useState } from "react"; 
 import { furniture } from "../array/array";
-import { CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
+import { CatalogButton, CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
 import { Container } from "../container/Container";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const allCategories = ["Столи", "Стільці", "Дивани", "Ліжка"];
 
@@ -34,12 +37,14 @@ export const Catalog = () => {
     );
   };
 
-  const addToCart = (item) => {
-    const currentCart = getCartFromLocalStorage();
-    const updatedCart = [...currentCart, item];
-    saveCartToLocalStorage(updatedCart);
-    console.log("Додано до кошика (localStorage):", item.name);
-  };
+const addToCart = (item) => {
+  const currentCart = getCartFromLocalStorage();
+  const updatedCart = [...currentCart, item];
+  saveCartToLocalStorage(updatedCart);
+
+  toast.success(`${item.name} додано до кошика!`);
+};
+
 
   const filteredFurniture =
     selectedCategories.length === 0
@@ -66,10 +71,11 @@ export const Catalog = () => {
           {filteredFurniture.map((item) => (
             <CatalogItem key={item.id}>
               <p>{item.name}</p>
-              <button onClick={() => addToCart(item)}>Додати до кошика</button>
+              <CatalogButton onClick={() => addToCart(item)}>Додати до кошика</CatalogButton>
             </CatalogItem>
           ))}
         </CatalogList>
+        <ToastContainer position="bottom-right" autoClose={2000} />
       </Container>
     </>
   );
