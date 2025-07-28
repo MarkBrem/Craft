@@ -2,13 +2,13 @@ import { useState } from "react";
 import { furniture } from "../array/array";
 import { CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
 import { Container } from "../container/Container";
+import { Basket } from "./Basket";
 
 const allCategories = ["Столи", "Стільці", "Дивани"];
 
-
-
 export const Catalog = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
@@ -18,25 +18,28 @@ export const Catalog = () => {
     );
   };
 
+  const addToCart = (item) => {
+    setCart((prevCart) => [...prevCart, item]);
+    console.log("Кошик:", [...cart, item]);
+  };
+
   const filteredFurniture =
     selectedCategories.length === 0
       ? furniture
       : furniture.filter((item) => selectedCategories.includes(item.category));
 
-  return (
-    <Container>
+  return (<>
+  <Container>
       <CategoryList>
         {allCategories.map((category) => (
-            <li>
-              <CategoryButton
-            key={category}
-            $active={selectedCategories.includes(category)}
-            onClick={() => toggleCategory(category)}
-          >
-            {category}
-          </CategoryButton>
-            </li>
-          
+          <li key={category}>
+            <CategoryButton
+              $active={selectedCategories.includes(category)}
+              onClick={() => toggleCategory(category)}
+            >
+              {category}
+            </CategoryButton>
+          </li>
         ))}
       </CategoryList>
 
@@ -44,10 +47,14 @@ export const Catalog = () => {
         {filteredFurniture.map((item) => (
           <CatalogItem key={item.id}>
             <p>{item.name}</p>
+            <button onClick={() => addToCart(item)}>Додати до кошика</button>
           </CatalogItem>
         ))}
       </CatalogList>
     </Container>
+    <Basket cartItems={cart} />
+  </>
+    
+    
   );
 };
-
