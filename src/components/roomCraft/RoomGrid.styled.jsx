@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+
 export const RoomGridStl = styled.div`
   display: grid;
+  position: relative;
   grid-template-columns: repeat(6, 1fr);
   gap: 4px;
   width: 300px;
