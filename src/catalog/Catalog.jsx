@@ -2,7 +2,6 @@ import { useState } from "react";
 import { furniture } from "../array/array";
 import { CatalogItem, CatalogList, CategoryButton, CategoryList } from "./CatalogStyled";
 import { Container } from "../container/Container";
-import { Basket } from "./Basket";
 
 const allCategories = ["Столи", "Стільці", "Дивани"];
 
@@ -52,7 +51,6 @@ export const Catalog = () => {
         ))}
       </CatalogList>
     </Container>
-    <Basket cartItems={cart} />
   </>
     
     
