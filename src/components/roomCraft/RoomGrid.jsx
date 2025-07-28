@@ -3,9 +3,12 @@ import { Container } from "../../container/Container";
 import { RoomGridStl, GridCell, RoomBackground } from "./RoomGrid.styled";
 import floorTexture from '../../foto/c6a47533567533d7eb19209983b773e8.jpg';
 import bgImage from "../../foto/bgimage.jpg";
-import { BasketContainer, BasketItem, BasketList } from './BasketStyled';
+import { BasketButton, BasketContainer, BasketItem, BasketList, ButtonList, Delete } from './BasketStyled';
 import { useDrop } from 'react-dnd';
 import { DraggableFurniture } from './DraggableFurniture';
+import { IoMdAdd } from "react-icons/io";
+import { MdDeleteOutline } from "react-icons/md";
+
 
 export const RoomGrid = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -24,6 +27,12 @@ export const RoomGrid = () => {
     };
 
     loadCartFromLocalStorage();
+
+    const removeFromCart = (id) => {
+  const updatedCart = cartItems.filter(item => item.id !== id);
+  setCartItems(updatedCart);
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+};
 
     const handleStorageChange = (event) => {
       if (event.key === 'cart') {
@@ -88,8 +97,14 @@ export const RoomGrid = () => {
             ) : (
               <BasketList>
                 {cartItems.map((item, index) => (
-                  <BasketItem key={item.id}>{item.name}
-                  <button type='button' onClick={()=>{placeItemInGrid(item)}}>Розмістити в кімнаті</button>
+                  <BasketItem key={item.id}>
+                  <p>
+                    {item.name}
+                  </p>
+                  <ButtonList>
+                    <BasketButton type='button' onClick={()=>{placeItemInGrid(item)}}><IoMdAdd style={{width: '20px', height:'20px'}} /></BasketButton>
+                  <Delete type='button' onClick={() => removeFromCart(item.id)}><MdDeleteOutline style={{width: '20px', height:'20px'}} /></Delete>
+                  </ButtonList>
                   </BasketItem>
                 ))}
               </BasketList>

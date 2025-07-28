@@ -43,7 +43,7 @@ export const furniture = [
 
   { id: 11, name: "Офісний стілець", category: "Стільці", foto2d: f11 },
   { id: 12, name: "Дерев'яний стілець", category: "Стільці", foto2d: f12 },
-  { id: 13, name: "ігрове крісло", category: "Стільці", foto2d: f13 },
+  { id: 13, name: "Ігрове крісло", category: "Стільці", foto2d: f13 },
   { id: 14, name: "Крісло-стілець", category: "Стільці", foto2d: f14 },
   { id: 15, name: "Крісло-мішок", category: "Стільці", foto2d: f15 },
   { id: 16, name: "Стілець з м’яким сидінням", category: "Стільці", foto2d: f16 },

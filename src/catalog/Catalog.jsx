@@ -4,6 +4,7 @@ import { CatalogButton, CatalogItem, CatalogList, CategoryButton, CategoryList }
 import { Container } from "../container/Container";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaShoppingCart } from "react-icons/fa";
 
 
 const allCategories = ["Столи", "Стільці", "Дивани", "Ліжка"];
@@ -71,7 +72,7 @@ const addToCart = (item) => {
           {filteredFurniture.map((item) => (
             <CatalogItem key={item.id}>
               <p>{item.name}</p>
-              <CatalogButton onClick={() => addToCart(item)}>Додати до кошика</CatalogButton>
+              <CatalogButton onClick={() => addToCart(item)}><FaShoppingCart /></CatalogButton>
             </CatalogItem>
           ))}
         </CatalogList>
