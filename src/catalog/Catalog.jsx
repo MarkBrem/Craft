@@ -1,6 +1,6 @@
 import { useState } from "react"; 
 import { furniture } from "../array/array";
-import { CatalogButton, CatalogItem, CatalogList, CategoryButton, CategoryList,  } from "./CatalogStyled";
+import { CatalogButton, CatalogItem, CatalogList, CategoryButton, CategoryList, CategorySectionContainer  } from "./CatalogStyled";
 import { Container } from "../container/Container";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -54,7 +54,7 @@ const addToCart = (item) => {
 
   return (
     <>
-    {/* <CategorySectionContainer> */}
+    <CategorySectionContainer>
       <Container>
         <CategoryList>
           {allCategories.map((category) => (
@@ -72,6 +72,7 @@ const addToCart = (item) => {
         <CatalogList>
           {filteredFurniture.map((item) => (
             <CatalogItem key={item.id}>
+              <img src={item.foto3d} alt="item.name" />
               <p>{item.name}</p>
               <CatalogButton onClick={() => addToCart(item)}><FaShoppingCart /></CatalogButton>
             </CatalogItem>
@@ -79,7 +80,7 @@ const addToCart = (item) => {
         </CatalogList>
         <ToastContainer position="bottom-right" autoClose={2000} />
       </Container>
-      {/* </CategorySectionContainer> */}
+      </CategorySectionContainer>
     </>
   );
 };
