@@ -6,18 +6,18 @@ import { RoomGrid } from "../components/roomCraft/RoomGrid";
 
 export const routing = createBrowserRouter([
   {
-    path: "/",
+    path: "/Craft",
     element: <Layout />,
     children: [
       { index: true,
         element: <HomePage/>,
       },
       {
-        path: "/catalog",
+        path: "/Craft/catalog",
         element: <Catalog />,
       },
       {
-        path:"/createRoom",
+        path:"/Craft/createRoom",
         element: <RoomGrid/>
       }
     ],

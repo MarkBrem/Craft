@@ -10,17 +10,17 @@ export const Header = ({ name }) => {
       <Container>
         <FlexWrapper>
           <LogoContainer>
-            <NavLink to={'./'}>
+            <NavLink to={'/Craft'}>
               <Logo src={logo} alt="logo" />
             </NavLink>
           </LogoContainer>
 
           <NavList>
             <NavItem>
-              <StyledNavLink to={'/catalog'}>Каталог</StyledNavLink>
+              <StyledNavLink to={'/Craft/catalog'}>Каталог</StyledNavLink>
             </NavItem>
             <NavItem>
-              <StyledNavLink to={'createRoom'}>Створити кімнату</StyledNavLink>
+              <StyledNavLink to={'/Craft/createRoom'}>Створити кімнату</StyledNavLink>
             </NavItem>
           </NavList>
 

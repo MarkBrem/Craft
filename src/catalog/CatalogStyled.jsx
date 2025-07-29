@@ -12,6 +12,10 @@ export const CatalogList = styled.ul`
   @media screen and (max-width: 767px) {
     gap: 20px;
   }
+
+  @media screen and (max-width: 1199px) and (min-width: 768px){
+    gap: 30px;
+  }
 `;
 
 export const CatalogItem = styled.li`
@@ -80,8 +84,7 @@ export const CatalogButton = styled.button`
   }
 
   @media screen and (max-width: 767px) {
-  }
-`;
+  }`;
 
 export const CategorySectionContainer = styled.div`
   
