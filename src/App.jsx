@@ -5,6 +5,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import { TouchBackend } from "react-dnd-touch-backend";
 import "./index.css";
+import { DiSafari } from "react-icons/di";
 
 const getBackend = () =>{
   if("ontouchstart" in window || navigator.maxTouchPoints > 1){
@@ -21,4 +22,6 @@ export const App = () => {
   </DndProvider>
   <GlobalStyle/>
   </>
+
+  // DiSafari.
 };
