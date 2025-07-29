@@ -12,6 +12,9 @@ import {
   BasketTitle,
   ButtonList,
   Delete,
+  MainItemContainer,
+  ImageBascetContainer,
+  TextBascetConatiner,
 } from "./BasketStyled";
 import { useDrop } from "react-dnd";
 import { DraggableFurniture } from "./DraggableFurniture";
@@ -58,7 +61,7 @@ export const RoomGrid = () => {
   const placeItemInGrid = (item) => {
     const isPlaced = placedItems.some((arrEl) => arrEl.id === item.id);
     if (!isPlaced) {
-      setPlacedItems((prev) => [...prev, { ...item, x: 50, y: 50 }]);
+      setPlacedItems((prev) => [...prev, { ...item, x: 50, y: 50, rotation: 0 }]);
     }
   };
 
@@ -71,6 +74,12 @@ export const RoomGrid = () => {
       )
     );
   };
+
+  const rotateItem = (id) =>{
+    setPlacedItems((prev)=>
+      prev.map((item)=> item.id === id ? {...item, rotation: (item.rotation + 45) % 360}: item)
+    )
+  }
 
   const deleteItem = (id) => {
     setPlacedItems((prev) => prev.filter((item) => item.id != id));
@@ -93,6 +102,17 @@ export const RoomGrid = () => {
     },
   }));
 
+  useEffect(() => {
+  const savedPlacedItems = localStorage.getItem("placedItems");
+  if (savedPlacedItems) {
+    setPlacedItems(JSON.parse(savedPlacedItems));
+  }
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("placedItems", JSON.stringify(placedItems));
+}, [placedItems]);
+
   return (
     <RoomBackground image={bgImage}>
       <Container>
@@ -108,6 +128,7 @@ export const RoomGrid = () => {
               onDeleteBtn={deleteItem}
               isSelected = {selectedItemId === item.id}
               onSelect={()=>setSelectedItemId(item.id)}
+              onRotate={rotateItem} 
             />
           ))}
         </RoomGridStl>
@@ -120,6 +141,11 @@ export const RoomGrid = () => {
             <BasketList>
               {cartItems.map((item) => (
                 <BasketItem key={item.id}>
+                  <MainItemContainer>
+                  <ImageBascetContainer>
+                    <img src={item.foto3d} alt={item.foto3d} width="50px"/>
+                  </ImageBascetContainer>
+                  <TextBascetConatiner>
                   <BasketText>{item.name}</BasketText>
                   <ButtonList>
                     <BasketButton
@@ -135,6 +161,8 @@ export const RoomGrid = () => {
                       <MdDeleteOutline size={20} />
                     </Delete>
                   </ButtonList>
+                  </TextBascetConatiner>
+                  </MainItemContainer>
                 </BasketItem>
               ))}
             </BasketList>

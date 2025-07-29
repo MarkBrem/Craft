@@ -75,6 +75,10 @@ export const CatalogButton = styled.button`
   margin-top: auto;
   margin-bottom: 20px;
 
+  &:hover{
+    background-color: #76b041;
+  }
+
   @media screen and (max-width: 767px) {
   }
 `;
