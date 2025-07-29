@@ -22,4 +22,7 @@ export const routing = createBrowserRouter([
       }
     ],
   },
+  // {
+  //   basename: '/craft'
+  // }
 ]);

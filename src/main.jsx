@@ -4,7 +4,7 @@ import { BrowserRouter, RouterProvider } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(<>
     <RouterProvider>
-        <BrowserRouter><App/> </BrowserRouter>
+        <BrowserRouter basename="/craft"><App/> </BrowserRouter>
     </RouterProvider>
 </>
 );
