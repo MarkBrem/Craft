@@ -4,8 +4,8 @@
   publish = "dist"
   base = "/"
 
-# Для SPA, наприклад React (можна увімкнути, якщо потрібна підтримка роутів через reload)
-#[[redirects]]
-#  from = "/*"
+[[redirects]]
+  from = "/*"
   to = "/Craft/index.html"
   status = 200
+
