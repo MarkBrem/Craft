@@ -3,5 +3,7 @@
 
     export default defineConfig({
       plugins: [react()],
-      base: '/'
+      base: '/',
+      minify: false,
+  sourcemap: true,
     })
