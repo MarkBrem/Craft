@@ -1,11 +1,11 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "build"
+  publish = "dist"
   base = "/"
 
-# Для SPA, наприклад React (можна увімкнути, якщо потрібна підтримка роутів через reload)
-#[[redirects]]
-#  from = "/*"
-#  to = "/index.html"
-#  status = 200
+[[redirects]]
+  from = "/*"
+  to = "/Craft/index.html"
+  status = 200
+
