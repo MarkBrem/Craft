@@ -16,7 +16,7 @@ export const RoomGridStl = styled.div`
 
 export const GridCell = styled.div`
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
 
   &:hover {

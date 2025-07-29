@@ -13,7 +13,7 @@ export const CatalogList = styled.ul`
     gap: 20px;
   }
 
-  @media screen and (max-width: 1139px min-width: 768px;){
+  @media screen and (max-width: 1199px) and (min-width: 768px){
     gap: 30px;
   }
 `;
@@ -78,7 +78,13 @@ export const CatalogButton = styled.button`
   padding: 7px 100px;
   margin-top: auto;
   margin-bottom: 20px;
-`;
+
+  &:hover{
+    background-color: #76b041;
+  }
+
+  @media screen and (max-width: 767px) {
+  }`;
 
 export const CategorySectionContainer = styled.div`
   
