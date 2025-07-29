@@ -37,11 +37,11 @@ export const HowItWorksListItem = styled.li`
   align-items: center;
   flex: 1;
 
-  width: 200px;
+  width: 220px;
 
   min-height: 160px;
   @media screen and (max-width: 767px){
-    width: 130px;
+    width: 150px;
   }
 `;
 
@@ -66,6 +66,7 @@ export const HowItWorksText = styled.p`
 
 export const SectionHowItWorks = styled.div`
     padding: 150px 0;
+    
     @media screen and (max-width: 767px){
     padding: 40px 0;
   }
