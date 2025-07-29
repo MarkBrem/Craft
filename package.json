@@ -3,11 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vite.dev/",
-  "repository": {
-    "type": "git",
-    "url": "https://markbrem.github.io/Craft/"
-  },
+  "homepage": "https://markbrem.github.io/Craft/#",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
