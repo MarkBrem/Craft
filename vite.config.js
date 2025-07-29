@@ -3,5 +3,4 @@
 
     export default defineConfig({
       plugins: [react()],
-      base: '/<Craft>/',
     })
