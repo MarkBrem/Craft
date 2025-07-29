@@ -34,7 +34,7 @@ export const LogoItem = styled.div`
 
 export const WishList = styled.div`
 text-align: right;
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     display: none;
   }
 `

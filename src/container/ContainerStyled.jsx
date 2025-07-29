@@ -20,9 +20,5 @@ export const ContainerStyled = styled.div`
   @media screen and (max-width: 767px){
     width: 320px;
     padding: 0;
-  }
-
-  @media screen and ( min-width: 1200px){
-    width: 1140px;
-  }
+  };
 `;
