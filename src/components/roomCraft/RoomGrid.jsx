@@ -23,8 +23,20 @@ import { MdDeleteOutline } from "react-icons/md";
 
 export const RoomGrid = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [placedItems, setPlacedItems] = useState([]);
   const [selectedItemId, setSelectedItemId] = useState(null);
+
+  const initialPlacedItems = (() => {
+  try {
+    const saved = localStorage.getItem("placedItems");
+    return saved ? JSON.parse(saved) : [];
+  } catch (err) {
+    console.error("Помилка при зчитуванні placedItems:", err);
+    return [];
+  }
+})();
+
+const [placedItems, setPlacedItems] = useState(initialPlacedItems);
+
 
   const removeFromCart = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
@@ -102,13 +114,6 @@ export const RoomGrid = () => {
     },
   }));
 
-  useEffect(() => {
-  const savedPlacedItems = localStorage.getItem("placedItems");
-  if (savedPlacedItems) {
-    setPlacedItems(JSON.parse(savedPlacedItems));
-  }
-}, []);
-
 useEffect(() => {
   localStorage.setItem("placedItems", JSON.stringify(placedItems));
 }, [placedItems]);
@@ -143,7 +148,7 @@ useEffect(() => {
                 <BasketItem key={item.id}>
                   <MainItemContainer>
                   <ImageBascetContainer>
-                    <img src={item.foto3d} alt={item.foto3d} width="50px"/>
+                    <img src={item.foto3d} alt={item.foto3d} width="65px"/>
                   </ImageBascetContainer>
                   <TextBascetConatiner>
                   <BasketText>{item.name}</BasketText>

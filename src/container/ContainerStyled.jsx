@@ -21,8 +21,4 @@ export const ContainerStyled = styled.div`
     width: 320px;
     padding: 0;
   };
-
-  @media screen and (min-width: 1140px) {
-    width: 1140px;
-  };
 `;
