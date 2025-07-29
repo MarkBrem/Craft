@@ -1,30 +1,16 @@
-# REACT-ROUTER-DOM (v.6.4.4)
+🛋️ RoomCraft
+RoomCraft — це візуальний конструктор кімнат, де підлітки можуть планувати дизайн власної кімнати: обирати меблі, перетягувати їх у сітку, створювати свій простір.
 
-## WHAT IS ROUTER
+🔧 Технології
+React + Vite
+React Router DOM
+React DnD (HTML5 + Touch backend)
+styled-components
 
-(example)
+🚀 Як запустити проєкт локально?
+Склонуй репозиторій або завантаж архів
+Встанови залежності: npm install
+Запусти проєкт: npm run dev
+Відкрий у браузері:  http://localhost:5173/Craft
 
-## THE ISSUE
-
-(example)
-
-## React-Router-Dom
-
-- 6.4.4
-- 8.8m/w
-- 49k stars
-
-## Topics to cover
-
-- How to create basic routing
-- - Create router
-- - User Provider
-- Types of routers
-- - Browser
-- - Hash
-- - Memory
-- Navigation
-- Layout page
-- Not found page
-- Parameters
-- Manual Change
+Жива сторінка: https://markroomcraft.netlify.app/
