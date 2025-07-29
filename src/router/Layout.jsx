@@ -6,35 +6,27 @@ import { RegistrationForm } from "../components/Form";
 import { Footer } from "../footer/Footer";
 
 export const Layout = () => {
-const [userName, setUserName] = useState('');
+  const [userName, setUserName] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleNameSubmit = (name) => {
     setUserName(name);
     setIsSubmitted(true);
   };
-  return (<>
-  {/* <div style={{ height: '100vh', width: '100vw', margin: 0 }}>
+
+  return (
+    <div style={{ height: '100vh', width: '100vw', margin: 0 }}>
       {!isSubmitted ? (
         <RegistrationForm onNameSubmit={handleNameSubmit} />
-      ) : (<>
-      <Header name= {userName}/>
-      <main>
-          <Outlet />
-      </main>
-      <Footer/>
-      </>
+      ) : (
+        <>
+          <Header name={userName} />
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
+        </>
       )}
-    </div> */}
-      <>
-      <Header name= {userName}/>
-      <main>
-          <Outlet />
-      </main>
-      <Footer/>
-      </>
-     
-  </>
-    
+    </div>
   );
-}
+};
