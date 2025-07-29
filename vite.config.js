@@ -4,6 +4,8 @@
     export default defineConfig({
       plugins: [react()],
       base: '/',
-      minify: false,
+      build: {
+  minify: false,
   sourcemap: true,
+}
     })
