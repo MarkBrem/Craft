@@ -2,7 +2,7 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "build"
+  publish = "/build"
   base = '/'
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
@@ -13,7 +13,8 @@
   #  status = 200
 
 [[plugins]]
-package = "netlify-plugin-check-output-for-puppy-references"
+  package = "netlify-plugin-check-output-for-puppy-references"
+
   [plugins.inputs]
   breeds = ["pomeranian", "chihuahua", "bulldog"]
 
