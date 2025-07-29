@@ -23,6 +23,5 @@ export const routing = createBrowserRouter([
     ],
   },
   {
-    basename: '/Сraft'
   }
 ]);
