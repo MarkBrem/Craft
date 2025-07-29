@@ -28,6 +28,37 @@ import f27 from '../array-foto/2d-27.png';
 import f28 from '../array-foto/2d-28.png';
 import f29 from '../array-foto/2d-29.png'; 
 import f30 from '../array-foto/2d-30.png';
+import f1_3d from '../array-foto/3d-foto/3d-1.jpeg';
+import f2_3d from '../array-foto/3d-foto/3d-2.jpg';
+import f3_3d from '../array-foto/3d-foto/3d-3.jpeg';
+import f4_3d from '../array-foto/3d-foto/3d-4.jpg';
+import f5_3d from '../array-foto/3d-foto/3d-5.jpg';
+import f6_3d from '../array-foto/3d-foto/3d-6.jpg';
+import f7_3d from '../array-foto/3d-foto/3d-7.jpg';
+import f8_3d from '../array-foto/3d-foto/3d-8.jpg';
+import f9_3d from '../array-foto/3d-foto/3d-9.jpg';
+import f10_3d from '../array-foto/3d-foto/3d-10.jpg';
+import f11_3d from '../array-foto/3d-foto/3d-11.jpg';
+import f12_3d from '../array-foto/3d-foto/3d-12.jpg';
+import f13_3d from '../array-foto/3d-foto/3d-13.jpg';
+import f14_3d from '../array-foto/3d-foto/3d-14.jpg';
+import f15_3d from '../array-foto/3d-foto/3d-15.jpg';
+import f16_3d from '../array-foto/3d-foto/3d-16.jpg';
+import f17_3d from '../array-foto/3d-foto/3d-17.jpg';
+import f18_3d from '../array-foto/3d-foto/3d-18.jpg';
+import f19_3d from '../array-foto/3d-foto/3d-19.jpg';
+import f20_3d from '../array-foto/3d-foto/3d-20.jpg';
+import f21_3d from '../array-foto/3d-foto/3d-21.jpg';
+import f22_3d from '../array-foto/3d-foto/3d-22.jpg';
+import f23_3d from '../array-foto/3d-foto/3d-23.jpg';
+import f24_3d from '../array-foto/3d-foto/3d-24.jpg';
+import f25_3d from '../array-foto/3d-foto/3d-25.jpg';
+import f26_3d from '../array-foto/3d-foto/3d-26.jpeg';
+import f27_3d from '../array-foto/3d-foto/3d-27.jpeg';
+import f28_3d from '../array-foto/3d-foto/3d-28.jpeg';
+import f29_3d from '../array-foto/3d-foto/3d-29.jpeg';
+import f30_3d from '../array-foto/3d-foto/3d-30.jpeg';
+
 
 export const furniture = [
   { id: 1, name: "Письмовий стіл", category: "Столи", foto2d: f1 },

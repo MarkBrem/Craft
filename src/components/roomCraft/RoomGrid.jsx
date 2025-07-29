@@ -1,28 +1,37 @@
-import { useState, useEffect } from 'react'; 
+import { useState, useEffect } from "react";
 import { Container } from "../../container/Container";
 import { RoomGridStl, GridCell, RoomBackground } from "./RoomGrid.styled";
-import floorTexture from '../../foto/c6a47533567533d7eb19209983b773e8.jpg';
+import floorTexture from "../../foto/c6a47533567533d7eb19209983b773e8.jpg";
 import bgImage from "../../foto/bgimage.jpg";
-import { BasketButton, BasketContainer, BasketItem, BasketList, BasketText, BasketTitle, ButtonList, Delete } from './BasketStyled';
-import { useDrop } from 'react-dnd';
-import { DraggableFurniture } from './DraggableFurniture';
+import {
+  BasketButton,
+  BasketContainer,
+  BasketItem,
+  BasketList,
+  BasketText,
+  BasketTitle,
+  ButtonList,
+  Delete,
+} from "./BasketStyled";
+import { useDrop } from "react-dnd";
+import { DraggableFurniture } from "./DraggableFurniture";
 import { IoMdAdd } from "react-icons/io";
 import { MdDeleteOutline } from "react-icons/md";
-
 
 export const RoomGrid = () => {
   const [cartItems, setCartItems] = useState([]);
   const [placedItems, setPlacedItems] = useState([]);
+  const [selectedItemId, setSelectedItemId] = useState(null);
 
   const removeFromCart = (id) => {
-    const updatedCart = cartItems.filter(item => item.id !== id);
+    const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
   useEffect(() => {
     const loadCartFromLocalStorage = () => {
       try {
-        const storedCart = localStorage.getItem('cart');
+        const storedCart = localStorage.getItem("cart");
         if (storedCart) {
           setCartItems(JSON.parse(storedCart));
         }
@@ -34,31 +43,42 @@ export const RoomGrid = () => {
     loadCartFromLocalStorage();
 
     const handleStorageChange = (event) => {
-      if (event.key === 'cart') {
+      if (event.key === "cart") {
         loadCartFromLocalStorage();
       }
     };
 
-    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener("storage", handleStorageChange);
 
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 
   const placeItemInGrid = (item) => {
-    const isPlaced = placedItems.some(arrEl => arrEl.id === item.id);
+    const isPlaced = placedItems.some((arrEl) => arrEl.id === item.id);
     if (!isPlaced) {
-      setPlacedItems(prev => [...prev, { ...item, x: 50, y: 50 }]);
+      setPlacedItems((prev) => [...prev, { ...item, x: 50, y: 50 }]);
     }
   };
 
   const moveItem = (id, moveX, moveY) => {
-    setPlacedItems(prev =>
-      prev.map(item =>
-        item.id === id ? { ...item, x: item.x + moveX, y: item.y + moveY } : item
+    setPlacedItems((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? { ...item, x: item.x + moveX, y: item.y + moveY }
+          : item
       )
     );
+  };
+
+  const deleteItem = (id) => {
+    setPlacedItems((prev) => prev.filter((item) => item.id != id));
+
+    if(selectedItemId === id){
+      setSelectedItemId(null)
+    }
+
   };
 
   const [, drop] = useDrop(() => ({
@@ -70,19 +90,25 @@ export const RoomGrid = () => {
         const moveY = movementOffset.y;
         moveItem(item.id, moveX, moveY);
       }
-    }
+    },
   }));
 
   return (
     <RoomBackground image={bgImage}>
       <Container>
-        <RoomGridStl ref={drop} image={floorTexture}>
+        <RoomGridStl ref={drop} image={floorTexture} onClick={()=>{setSelectedItemId(null)}}>
           {Array.from({ length: 36 }).map((_, index) => (
             <GridCell key={index} />
           ))}
 
           {placedItems.map((item) => (
-            <DraggableFurniture key={item.id} item={item} />
+            <DraggableFurniture
+              key={item.id}
+              item={item}
+              onDeleteBtn={deleteItem}
+              isSelected = {selectedItemId === item.id}
+              onSelect={()=>setSelectedItemId(item.id)}
+            />
           ))}
         </RoomGridStl>
 
@@ -96,11 +122,17 @@ export const RoomGrid = () => {
                 <BasketItem key={item.id}>
                   <BasketText>{item.name}</BasketText>
                   <ButtonList>
-                    <BasketButton type="button" onClick={() => placeItemInGrid(item)}>
-                      <IoMdAdd style={{ width: '20px', height: '20px' }} />
+                    <BasketButton
+                      type="button"
+                      onClick={() => placeItemInGrid(item)}
+                    >
+                      <IoMdAdd size={20} />
                     </BasketButton>
-                    <Delete type="button" onClick={() => removeFromCart(item.id)}>
-                      <MdDeleteOutline style={{ width: '20px', height: '20px' }} />
+                    <Delete
+                      type="button"
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      <MdDeleteOutline size={20} />
                     </Delete>
                   </ButtonList>
                 </BasketItem>

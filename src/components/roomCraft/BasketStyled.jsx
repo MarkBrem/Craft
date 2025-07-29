@@ -51,22 +51,27 @@ background-color: #76b041;
 `
 
 export const BasketButton = styled.button`
+display: flex;
 background-color: #ffffff;
 border: none;
 border-radius: 100%;
 padding: 5px ;
 margin-top: 10px;
 cursor: pointer;
+justify-content: center;
+align-items: center;
 `
 
 export const Delete = styled.button`
-background-color: #FF0000;
-color: #fff;
+display: flex;
+background-color: #fff;
 border: none;
-border-radius: 100%;
+border-radius: 25px;
 padding: 5px ;
 margin-top: 10px;
 cursor: pointer;
+justify-content: center;
+align-items: center;
 `
 
 export const ButtonList = styled.div`
