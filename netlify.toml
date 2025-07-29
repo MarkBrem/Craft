@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "build"
+  publish = "dist"
   base = "/"
 
 # Для SPA, наприклад React (можна увімкнути, якщо потрібна підтримка роутів через reload)
