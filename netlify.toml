@@ -7,5 +7,5 @@
 # Для SPA, наприклад React (можна увімкнути, якщо потрібна підтримка роутів через reload)
 #[[redirects]]
 #  from = "/*"
-#  to = "/index.html"
-#  status = 200
+  to = "/Craft/index.html"
+  status = 200

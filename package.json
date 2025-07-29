@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://markroomcraft.netlify.app/Craft",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
