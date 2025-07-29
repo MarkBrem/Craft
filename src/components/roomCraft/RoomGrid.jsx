@@ -89,7 +89,7 @@ const [placedItems, setPlacedItems] = useState(initialPlacedItems);
 
   const rotateItem = (id) =>{
     setPlacedItems((prev)=>
-      prev.map((item)=> item.id === id ? {...item, rotation: (item.rotation + 45) % 360}: item)
+      prev.map((item)=> item.id === id ? {...item, rotation: (item.rotation + 90) % 360}: item)
     )
   }
 

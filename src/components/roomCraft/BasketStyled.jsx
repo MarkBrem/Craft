@@ -27,7 +27,7 @@ export const BasketText = styled.p`
 `;
 
 export const BasketItem = styled.li`
-  width: 200px;
+  width: 220px;
   height: 100px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -101,6 +101,7 @@ export const MainItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-top: 20px;
 `;
 export const ImageBascetContainer = styled.div`
