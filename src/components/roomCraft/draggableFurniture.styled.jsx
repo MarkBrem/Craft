@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const DraggableItem = styled.div`
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,3 +13,15 @@ export const DraggableItem = styled.div`
   top: ${(props) => props.top}px;
   background-image: url(${(props) => props.bg});
 `;
+
+export const DeleteButtonStl = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  padding: 5px;
+
+  border: none;
+  border-radius: 25px;
+`

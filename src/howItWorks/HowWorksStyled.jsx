@@ -4,6 +4,9 @@ export const HowItWorksTitle = styled.h2`
   font-family: "Manrope";
   font-size: 30px;
   text-align: center;
+  @media screen and (max-width: 767px){
+    font-size: 20px;
+  }
 `;
 
 export const HowItWorksList = styled.ul`
@@ -17,6 +20,14 @@ export const HowItWorksList = styled.ul`
 
   margin: 30px 0 0 0;
   padding: 0;
+
+  @media screen and (max-width: 767px){
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    gap:10px;
+    width: 130px;
+  }
 `;
 
 export const HowItWorksListItem = styled.li`
@@ -29,12 +40,18 @@ export const HowItWorksListItem = styled.li`
   width: 200px;
 
   min-height: 160px;
+  @media screen and (max-width: 767px){
+    width: 130px;
+  }
 `;
 
 export const CardTitle = styled.h3`
   font-family: "Manrope";
   font-size: 19px;
   margin-top: 10px;
+  @media screen and (max-width: 767px){
+    font-size: 14px;
+  }
 `;
 
 export const HowItWorksText = styled.p`
@@ -42,8 +59,14 @@ export const HowItWorksText = styled.p`
   font-weight: 400;
   font-size: 17px;
   margin-top: 15px;
+  @media screen and (max-width: 767px){
+    font-size: 12px;
+  }
 `;
 
 export const SectionHowItWorks = styled.div`
     padding: 150px 0;
+    @media screen and (max-width: 767px){
+    padding: 40px 0;
+  }
 `

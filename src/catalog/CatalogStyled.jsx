@@ -1,32 +1,39 @@
 import styled from "styled-components";
 
-export const CatalogList= styled.ul`
-margin-top: 30px;
-margin-bottom: 30px;
-display: flex;
-justify-content: center;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 45px;
-`
+export const CatalogList = styled.ul`
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 45px;
+
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+  }
+`;
 
 export const CatalogItem = styled.li`
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-width: 230px;
-height: 280px;
-border-radius: 8px;
-background-color: #76b041;
-`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  height: 280px;
+  border-radius: 8px;
+  background-color: #76b041;
+  @media screen and (max-width: 767px) {
+    width: 230px;
+    height: 260px;
+  }
+`;
 
 export const CategoryList = styled.ul`
-display: flex;  
-justify-content: center;
-gap: 10px;
-`
-    
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+`;
 
 export const CategoryButton = styled.button`
   padding: 8px 16px;
@@ -38,16 +45,24 @@ export const CategoryButton = styled.button`
   color: #000;
   font-weight: ${(props) => (props.$active ? "bold" : "normal")};
   transition: background-color 0.3s ease;
-  
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 `;
 
 export const CatalogButton = styled.button`
-display: block;
-background-color: #fff;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-padding:5px 2px 5px 2px;
-margin-top: 20px;
-width: 150px;
-`
+  display: block;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px 2px;
+  margin-top: 20px;
+  width: 150px;
+
+  @media screen and (max-width: 767px) {
+    width: 75px;
+  }
+`;

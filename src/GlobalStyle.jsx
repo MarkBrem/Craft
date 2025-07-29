@@ -17,6 +17,10 @@ ul {
 
   a,p{
 font-family: 'Manrope', sans-serif;
+font-size: 17px;
+@media screen and (max-width: 767px){
+    font-size: 14px;
+  }
   }
 
   h1{

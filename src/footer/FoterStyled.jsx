@@ -9,13 +9,11 @@ padding: 40px 0;
 export const FooterLogo = styled.img`
 width: 120px;
 height: auto;
-`
 
-// export const FooterList = styled.ul`
-// display: flex;
-// flex-direction: row;
-// align-items: center;
-// `
+@media screen and (max-width: 767px){
+    width: 90px;
+  }
+`
 
 export const ContactList = styled.ul`
 display: flex;
@@ -26,6 +24,9 @@ gap: 10px;
 
 export const Contacts = styled.p`
 color: #fff;
+@media screen and (max-width: 767px){
+    font-size: 12px;
+  }
 `
 
 export const LogoItem = styled.div`
@@ -33,6 +34,9 @@ export const LogoItem = styled.div`
 
 export const WishList = styled.div`
 text-align: right;
+@media screen and (max-width: 767px){
+    display: none;
+  }
 `
 
 export const FlexWrapper = styled.div`
@@ -42,4 +46,7 @@ export const FlexWrapper = styled.div`
   flex-direction: row;
   width: 100%; 
   gap: 20px; 
+  @media screen and (max-width: 767px){
+    gap: 5px;
+  }
 `;
