@@ -12,18 +12,18 @@ export const HowItWorks = () =>{
     <HowItWorksList>
         <HowItWorksListItem>
             <LuLayoutDashboard size={45}/>
-            <CardTitle>Обери кімнату</CardTitle>
-            <HowItWorksText>Вибери розмір кімнати або створюй свою сітку</HowItWorksText>
+            <CardTitle>Обери меблі в каталозі</CardTitle>
+            <HowItWorksText>переглядай категорії (столи, стільці, дивани, ліжка) й додавай меблі до кошика через іконку.</HowItWorksText>
         </HowItWorksListItem>
         <HowItWorksListItem>
             <TbArmchair2 size={45}/>
-            <CardTitle>Перетягуй меблі</CardTitle>
-            <HowItWorksText>Обирай предмети з каталогу та перетягуй у свою кімнату</HowItWorksText>
+            <CardTitle>Додай у кімнату</CardTitle>
+            <HowItWorksText>У кошику натисни + — предмет зʼявиться в центрі кімнати.Меблі можна: перетягувати (мишка/палець), обертати, видаляти.</HowItWorksText>
         </HowItWorksListItem>
         <HowItWorksListItem>
             <MdOutlineSaveAlt size={45}/>
-            <CardTitle>Збережи та поділись</CardTitle>
-            <HowItWorksText>Збережи свій дизайн як картинку або поділись із друзями</HowItWorksText>
+            <CardTitle>Плануй на сітці</CardTitle>
+            <HowItWorksText>Кімната — це сітка 6×6. Розставляй меблі як хочеш — положення автоматично зберігається навіть після перезавантаження.</HowItWorksText>
         </HowItWorksListItem>
     </HowItWorksList>
     </SectionHowItWorks>
